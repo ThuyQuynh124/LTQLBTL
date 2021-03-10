@@ -1,0 +1,51 @@
+﻿@model LTQLBTL.Models.PHONG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PHONG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenLoaiPHong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLoaiPHong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HienTrang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HienTrang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoNguoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoNguoi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDTPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDTPhong)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPhong }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

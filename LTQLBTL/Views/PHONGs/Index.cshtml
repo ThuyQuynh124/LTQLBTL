@@ -1,0 +1,52 @@
+﻿@model IEnumerable<LTQLBTL.Models.PHONG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenLoaiPHong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HienTrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoNguoi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoDTPhong)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenLoaiPHong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HienTrang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoNguoi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoDTPhong)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaPhong }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaPhong }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaPhong })
+        </td>
+    </tr>
+}
+
+</table>

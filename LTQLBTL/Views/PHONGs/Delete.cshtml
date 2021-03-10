@@ -1,0 +1,57 @@
+﻿@model LTQLBTL.Models.PHONG
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PHONG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenLoaiPHong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLoaiPHong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HienTrang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HienTrang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoNguoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoNguoi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDTPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDTPhong)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
