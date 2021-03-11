@@ -13,7 +13,6 @@ namespace LTQLBTL.Models
 
 
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
-        public virtual DbSet<BANGLUONG> BANGLUONGs { get; set; }
         public virtual DbSet<KHACHHANG> KHACHHANGs { get; set; }
         public virtual DbSet<CHUCVU> CHUCVUs { get; set; }
         public virtual DbSet<DICHVU> DICHVUs { get; set; }
@@ -46,12 +45,6 @@ namespace LTQLBTL.Models
               .Property(e => e.DiaChi)
               .IsUnicode(false);
 
-            modelBuilder.Entity<BANGLUONG>()
-              .Property(e => e.MaLuong)
-              .IsUnicode(false);
-
-            modelBuilder.Entity<BANGLUONG>()
-              .Property(e => e.TienLuong);
               
             modelBuilder.Entity<KHACHHANG>()
               .Property(e => e.MaKH)

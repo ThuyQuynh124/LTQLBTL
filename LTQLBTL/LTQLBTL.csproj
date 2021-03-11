@@ -128,7 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BANGLUONGsController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CHUCVUsController.cs" />
     <Compile Include="Controllers\DICHVUsController.cs" />
     <Compile Include="Controllers\HOADONsController.cs" />
@@ -169,10 +169,6 @@
     <Compile Include="Migrations\202103030121385_Create_Table_PHONG.Designer.cs">
       <DependentUpon>202103030121385_Create_Table_PHONG.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103031204516_Create_Table_BANGLUONG.cs" />
-    <Compile Include="Migrations\202103031204516_Create_Table_BANGLUONG.Designer.cs">
-      <DependentUpon>202103031204516_Create_Table_BANGLUONG.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202103031213152_Create_Table_HOADON.cs" />
     <Compile Include="Migrations\202103031213152_Create_Table_HOADON.Designer.cs">
       <DependentUpon>202103031213152_Create_Table_HOADON.cs</DependentUpon>
@@ -197,8 +193,12 @@
     <Compile Include="Migrations\202103091334517_Create_Database1.Designer.cs">
       <DependentUpon>202103091334517_Create_Database1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103110125131_Creat_Database.cs" />
+    <Compile Include="Migrations\202103110125131_Creat_Database.Designer.cs">
+      <DependentUpon>202103110125131_Creat_Database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\BANGLUONG.cs" />
+    <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\CHUCVU.cs" />
     <Compile Include="Models\CTPHIEUDANGKI.cs" />
     <Compile Include="Models\CT_HOADON.cs" />
@@ -289,11 +289,7 @@
     <Content Include="Views\LOAIPHONGs\Details.cshtml" />
     <Content Include="Views\LOAIPHONGs\Edit.cshtml" />
     <Content Include="Views\LOAIPHONGs\Index.cshtml" />
-    <Content Include="Views\BANGLUONGs\Create.cshtml" />
-    <Content Include="Views\BANGLUONGs\Delete.cshtml" />
-    <Content Include="Views\BANGLUONGs\Details.cshtml" />
-    <Content Include="Views\BANGLUONGs\Edit.cshtml" />
-    <Content Include="Views\BANGLUONGs\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -333,9 +329,6 @@
     <EmbeddedResource Include="Migrations\202103030121385_Create_Table_PHONG.resx">
       <DependentUpon>202103030121385_Create_Table_PHONG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103031204516_Create_Table_BANGLUONG.resx">
-      <DependentUpon>202103031204516_Create_Table_BANGLUONG.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103031213152_Create_Table_HOADON.resx">
       <DependentUpon>202103031213152_Create_Table_HOADON.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103091334517_Create_Database1.resx">
       <DependentUpon>202103091334517_Create_Database1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103110125131_Creat_Database.resx">
+      <DependentUpon>202103110125131_Creat_Database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

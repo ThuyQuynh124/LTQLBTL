@@ -7,13 +7,13 @@ namespace LTQLBTL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Create_Table_BANGLUONG : IMigrationMetadata
+    public sealed partial class Creat_Database : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Create_Table_BANGLUONG));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Creat_Database));
         
         string IMigrationMetadata.Id
         {
-            get { return "202103031204516_Create_Table_BANGLUONG"; }
+            get { return "202103110125131_Creat_Database"; }
         }
         
         string IMigrationMetadata.Source

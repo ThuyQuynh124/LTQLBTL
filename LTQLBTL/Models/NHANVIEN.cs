@@ -20,6 +20,6 @@ namespace LTQLBTL.Models
         [MaxLength(15)]
         public string SoDT { get; set; }
         public virtual ICollection<CHUCVU> CHUCVUs { get; set; }
-        public virtual BANGLUONG BANGLUONG { get; set; }
+      
     }
 }
