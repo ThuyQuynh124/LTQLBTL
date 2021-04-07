@@ -1,0 +1,58 @@
+﻿@model IEnumerable<LTQLBTL.Models.CTHOADON>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HOADON.NhanVienLap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHIEUDANGKI.MaNV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHONG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TienPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TienDV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOADON.NhanVienLap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHIEUDANGKI.MaNV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHONG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TienPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TienDV)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaCTHD }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaCTHD }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaCTHD })
+        </td>
+    </tr>
+}
+
+</table>

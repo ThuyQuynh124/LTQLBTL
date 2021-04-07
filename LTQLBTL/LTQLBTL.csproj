@@ -130,6 +130,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CHUCVUsController.cs" />
+    <Compile Include="Controllers\CTHOADONsController.cs" />
+    <Compile Include="Controllers\CTPHIEUDANGKIsController.cs" />
     <Compile Include="Controllers\DICHVUsController.cs" />
     <Compile Include="Controllers\HOADONsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -290,6 +292,16 @@
     <Content Include="Views\LOAIPHONGs\Edit.cshtml" />
     <Content Include="Views\LOAIPHONGs\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\CTHOADONs\Create.cshtml" />
+    <Content Include="Views\CTHOADONs\Delete.cshtml" />
+    <Content Include="Views\CTHOADONs\Details.cshtml" />
+    <Content Include="Views\CTHOADONs\Edit.cshtml" />
+    <Content Include="Views\CTHOADONs\Index.cshtml" />
+    <Content Include="Views\CTPHIEUDANGKIs\Create.cshtml" />
+    <Content Include="Views\CTPHIEUDANGKIs\Delete.cshtml" />
+    <Content Include="Views\CTPHIEUDANGKIs\Details.cshtml" />
+    <Content Include="Views\CTPHIEUDANGKIs\Edit.cshtml" />
+    <Content Include="Views\CTPHIEUDANGKIs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
