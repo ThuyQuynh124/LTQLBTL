@@ -13,14 +13,11 @@ namespace LTQLBTL.Models
     using System.Collections.Generic;
     using System.Web.Mvc;
 
-    public partial class NHANVIENs
+    public partial class TINTUCs
     {
-        public string MaNV { get; set; }
-        public string TenNV { get; set; }
+        public string ID { get; set; }
+        public string TieuDe { get; set; }
         [AllowHtml]
-        public string DiaChi { get; set; }
-        public string SoDT { get; set; }
-        public int Tuoi { get; set; }
-        public string MaCV { get; set; }
+        public string NoiDung { get; set; }
     }
 }

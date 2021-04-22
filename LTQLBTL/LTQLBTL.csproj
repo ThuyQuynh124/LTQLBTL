@@ -137,10 +137,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KHACHHANGsController.cs" />
     <Compile Include="Controllers\LOAIPHONGsController.cs" />
-    <Compile Include="Controllers\NHANVIENs1Controller.cs" />
     <Compile Include="Controllers\NHANVIENsController.cs" />
     <Compile Include="Controllers\PHIEUDANGKIsController.cs" />
     <Compile Include="Controllers\PHONGsController.cs" />
+    <Compile Include="Controllers\TINTUCsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -200,9 +200,28 @@
     <Compile Include="Migrations\202103110125131_Creat_Database.Designer.cs">
       <DependentUpon>202103110125131_Creat_Database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104220140231_Create_table_tintucs.cs" />
+    <Compile Include="Migrations\202104220140231_Create_table_tintucs.Designer.cs">
+      <DependentUpon>202104220140231_Create_table_tintucs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\CHUCVU.cs" />
+    <Compile Include="Models\CKeditor.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CKeditor.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CKeditor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CKeditor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CKeditor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CKeditor.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\CTPHIEUDANGKI.cs" />
     <Compile Include="Models\CT_HOADON.cs" />
     <Compile Include="Models\DICHVU.cs" />
@@ -210,28 +229,14 @@
     <Compile Include="Models\KHACHHANG.cs" />
     <Compile Include="Models\LOAIPHONG.cs" />
     <Compile Include="Models\LTQLDbContext.cs" />
-    <Compile Include="Models\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\NHANVIEN.cs" />
-    <Compile Include="Models\NHANVIENs.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\PHIEUDANGKI.cs" />
     <Compile Include="Models\PHONG.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
+    <Compile Include="Models\TINTUC.cs" />
+    <Compile Include="Models\TINTUCs.cs">
+      <DependentUpon>CKeditor.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -243,15 +248,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Model1.Context.tt">
+    <Content Include="Models\CKeditor.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>CKeditor.edmx</DependentUpon>
+      <LastGenOutput>CKeditor.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Model1.tt">
+    <Content Include="Models\CKeditor.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>CKeditor.edmx</DependentUpon>
+      <LastGenOutput>CKeditor.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -260,12 +265,12 @@
     <Content Include="Scripts\ckeditor\ckeditor.asp" />
     <Content Include="Scripts\ckeditor\ckeditor.js" />
     <Content Include="Scripts\ckeditor\ckeditor.pack" />
-    <EntityDeploy Include="Models\Model1.edmx">
+    <EntityDeploy Include="Models\CKeditor.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>CKeditor.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="Models\CKeditor.edmx.diagram">
+      <DependentUpon>CKeditor.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor.php" />
@@ -686,11 +691,11 @@
     <Content Include="Views\CTPHIEUDANGKIs\Details.cshtml" />
     <Content Include="Views\CTPHIEUDANGKIs\Edit.cshtml" />
     <Content Include="Views\CTPHIEUDANGKIs\Index.cshtml" />
-    <Content Include="Views\NHANVIENs1\Create.cshtml" />
-    <Content Include="Views\NHANVIENs1\Delete.cshtml" />
-    <Content Include="Views\NHANVIENs1\Details.cshtml" />
-    <Content Include="Views\NHANVIENs1\Edit.cshtml" />
-    <Content Include="Views\NHANVIENs1\Index.cshtml" />
+    <Content Include="Views\TINTUCs\Create.cshtml" />
+    <Content Include="Views\TINTUCs\Delete.cshtml" />
+    <Content Include="Views\TINTUCs\Details.cshtml" />
+    <Content Include="Views\TINTUCs\Edit.cshtml" />
+    <Content Include="Views\TINTUCs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -750,6 +755,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103110125131_Creat_Database.resx">
       <DependentUpon>202103110125131_Creat_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104220140231_Create_table_tintucs.resx">
+      <DependentUpon>202104220140231_Create_table_tintucs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

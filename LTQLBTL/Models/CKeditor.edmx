@@ -5,54 +5,45 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="LTQLDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="NHANVIENs">
+        <EntityType Name="TINTUCs">
           <Key>
-            <PropertyRef Name="MaNV" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="MaNV" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="TenNV" Type="varchar(max)" />
-          <Property Name="DiaChi" Type="varchar(max)" />
-          <Property Name="SoDT" Type="varchar" MaxLength="15" />
-          <Property Name="Tuoi" Type="int" Nullable="false" />
-          <Property Name="MaCV" Type="nvarchar(max)" />
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TieuDe" Type="nvarchar(max)" />
+          <Property Name="NoiDung" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="LTQLDbModelStoreContainer">
-          <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIENs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TINTUCs" EntityType="Self.TINTUCs" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LTQLDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="NHANVIENs">
+        <EntityType Name="TINTUCs">
           <Key>
-            <PropertyRef Name="MaNV" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="MaNV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TenNV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="SoDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="Tuoi" Type="Int32" Nullable="false" />
-          <Property Name="MaCV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TieuDe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="LTQLDbEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIENs" />
+        <EntityContainer Name="LTQLDbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TINTUCs" EntityType="Self.TINTUCs" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="LTQLDbModelStoreContainer" CdmEntityContainer="LTQLDbEntities">
-          <EntitySetMapping Name="NHANVIENs">
-            <EntityTypeMapping TypeName="LTQLDbModel.NHANVIENs">
-              <MappingFragment StoreEntitySet="NHANVIENs">
-                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-                <ScalarProperty Name="TenNV" ColumnName="TenNV" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-                <ScalarProperty Name="SoDT" ColumnName="SoDT" />
-                <ScalarProperty Name="Tuoi" ColumnName="Tuoi" />
-                <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+        <EntityContainerMapping StorageEntityContainer="LTQLDbModelStoreContainer" CdmEntityContainer="LTQLDbEntities1">
+          <EntitySetMapping Name="TINTUCs">
+            <EntityTypeMapping TypeName="LTQLDbModel.TINTUCs">
+              <MappingFragment StoreEntitySet="TINTUCs">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

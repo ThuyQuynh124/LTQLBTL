@@ -22,8 +22,9 @@ namespace LTQLBTL.Models
         public virtual DbSet<CTHOADON> CTHOADONs { get; set; }
         public virtual DbSet<PHIEUDANGKI> PHIEUDANGKIs { get; set; }
         public virtual DbSet<CTPHIEUDANGKI> CTPHIEUDANGKIs { get; set; }
-    
-    
+        public virtual DbSet<TINTUC> TINTUCs { get; set; }
+
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -116,8 +117,17 @@ namespace LTQLBTL.Models
             .Property(e => e.MaCTPDK)
             .IsUnicode(false);
 
+            //modelBuilder.Entity<TINTUC>()
+            //.Property(e => e.ID)
+            //.IsUnicode(false);
 
+            //modelBuilder.Entity<TINTUC>()
+            //.Property(e => e.TieuDe)
+            //.IsUnicode(false);
 
+            //modelBuilder.Entity<TINTUC>()
+            //.Property(e => e.NoiDung)
+            //.IsUnicode(false);
 
 
         }

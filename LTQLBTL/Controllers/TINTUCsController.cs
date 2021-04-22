@@ -10,107 +10,107 @@ using LTQLBTL.Models;
 
 namespace LTQLBTL.Controllers
 {
-    public class NHANVIENs1Controller : Controller
+    public class TINTUCsController : Controller
     {
         private LTQLDbContext db = new LTQLDbContext();
 
-        // GET: NHANVIENs1
+        // GET: TINTUCs
         public ActionResult Index()
         {
-            return View(db.NHANVIENs.ToList());
+            return View(db.TINTUCs.ToList());
         }
 
-        // GET: NHANVIENs1/Details/5
+        // GET: TINTUCs/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NHANVIEN nHANVIEN = db.NHANVIENs.Find(id);
-            if (nHANVIEN == null)
+            TINTUC tINTUC = db.TINTUCs.Find(id);
+            if (tINTUC == null)
             {
                 return HttpNotFound();
             }
-            return View(nHANVIEN);
+            return View(tINTUC);
         }
 
-        // GET: NHANVIENs1/Create
+        // GET: TINTUCs/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: NHANVIENs1/Create
+        // POST: TINTUCs/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaNV,TenNV,MaCV,DiaChi,Tuoi,SoDT")] NHANVIEN nHANVIEN)
+        public ActionResult Create([Bind(Include = "ID,TieuDe,NoiDung")] TINTUC tINTUC)
         {
             if (ModelState.IsValid)
             {
-                db.NHANVIENs.Add(nHANVIEN);
+                db.TINTUCs.Add(tINTUC);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(nHANVIEN);
+            return View(tINTUC);
         }
 
-        // GET: NHANVIENs1/Edit/5
+        // GET: TINTUCs/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NHANVIEN nHANVIEN = db.NHANVIENs.Find(id);
-            if (nHANVIEN == null)
+            TINTUC tINTUC = db.TINTUCs.Find(id);
+            if (tINTUC == null)
             {
                 return HttpNotFound();
             }
-            return View(nHANVIEN);
+            return View(tINTUC);
         }
 
-        // POST: NHANVIENs1/Edit/5
+        // POST: TINTUCs/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaNV,TenNV,MaCV,DiaChi,Tuoi,SoDT")] NHANVIEN nHANVIEN)
+        public ActionResult Edit([Bind(Include = "ID,TieuDe,NoiDung")] TINTUC tINTUC)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(nHANVIEN).State = EntityState.Modified;
+                db.Entry(tINTUC).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(nHANVIEN);
+            return View(tINTUC);
         }
 
-        // GET: NHANVIENs1/Delete/5
+        // GET: TINTUCs/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NHANVIEN nHANVIEN = db.NHANVIENs.Find(id);
-            if (nHANVIEN == null)
+            TINTUC tINTUC = db.TINTUCs.Find(id);
+            if (tINTUC == null)
             {
                 return HttpNotFound();
             }
-            return View(nHANVIEN);
+            return View(tINTUC);
         }
 
-        // POST: NHANVIENs1/Delete/5
+        // POST: TINTUCs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            NHANVIEN nHANVIEN = db.NHANVIENs.Find(id);
-            db.NHANVIENs.Remove(nHANVIEN);
+            TINTUC tINTUC = db.TINTUCs.Find(id);
+            db.TINTUCs.Remove(tINTUC);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

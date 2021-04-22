@@ -13,10 +13,10 @@ namespace LTQLBTL.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LTQLDbEntities : DbContext
+    public partial class LTQLDbEntities1 : DbContext
     {
-        public LTQLDbEntities()
-            : base("name=LTQLDbEntities")
+        public LTQLDbEntities1()
+            : base("name=LTQLDbEntities1")
         {
         }
     
@@ -25,6 +25,6 @@ namespace LTQLBTL.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<NHANVIENs> NHANVIENs { get; set; }
+        public virtual DbSet<TINTUCs> TINTUCs { get; set; }
     }
 }
