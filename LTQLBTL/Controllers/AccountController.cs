@@ -5,11 +5,15 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using LTQLBTL.Models;
 
 namespace LTQLBTL.Controllers
 {
+    [Authorize (Roles = "1")]
     public class AccountController : Controller
     {
+        LTQLDbContext db = new LTQLDbContext();
+        [AllowAnonymous]
         //Action Login(HttpGet), mặc định là get
         public ViewResult Login(string returnUrl)
         {
@@ -20,11 +24,12 @@ namespace LTQLBTL.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(AccountModel acc, string returnUrl)
+        public ActionResult Login(Account acc, string returnUrl)
         {
             // Nếu vượt qua được validation ở accounmodel
             if (ModelState.IsValid)
             {
+                var models = db.Accounts.Where(m => m.Username == acc.Username && m.Password == acc.Password).ToList().Count();
                 //kiểm tra thông tin đăng nhập
                 if (acc.Username == "admin" && acc.Password == "123123")
                 {

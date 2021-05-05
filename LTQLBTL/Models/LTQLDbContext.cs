@@ -22,9 +22,9 @@ namespace LTQLBTL.Models
         public virtual DbSet<CTHOADON> CTHOADONs { get; set; }
         public virtual DbSet<PHIEUDANGKI> PHIEUDANGKIs { get; set; }
         public virtual DbSet<CTPHIEUDANGKI> CTPHIEUDANGKIs { get; set; }
-        public virtual DbSet<TINTUC> TINTUCs { get; set; }
-
-
+        public virtual DbSet<THONGTIN> THONGTINs { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -35,32 +35,16 @@ namespace LTQLBTL.Models
               .IsUnicode(false);
 
             modelBuilder.Entity<NHANVIEN>()
-              .Property(e => e.TenNV)
-              .IsUnicode(false);
-
-            modelBuilder.Entity<NHANVIEN>()
               .Property(e => e.MaNV)
               .IsUnicode(false);
 
-            modelBuilder.Entity<NHANVIEN>()
-              .Property(e => e.DiaChi)
-              .IsUnicode(false);
-
-              
+          
             modelBuilder.Entity<KHACHHANG>()
               .Property(e => e.MaKH)
               .IsUnicode(false);
 
             modelBuilder.Entity<KHACHHANG>()
-             .Property(e => e.TenKH)
-             .IsUnicode(false);
-
-            modelBuilder.Entity<KHACHHANG>()
              .Property(e => e.NamSinh)
-             .IsUnicode(false);
-
-            modelBuilder.Entity<KHACHHANG>()
-             .Property(e => e.DiaChi)
              .IsUnicode(false);
 
             modelBuilder.Entity<KHACHHANG>()
@@ -74,18 +58,6 @@ namespace LTQLBTL.Models
             modelBuilder.Entity<CHUCVU>()
              .Property(e => e.MaCV)
              .IsUnicode(false);
-
-            modelBuilder.Entity<CHUCVU>()
-             .Property(e => e.TenCV)
-             .IsUnicode(false);
-
-            modelBuilder.Entity<DICHVU>()
-             .Property(e => e.MaDV)
-             .IsUnicode(false);
-
-            modelBuilder.Entity<DICHVU>()
-            .Property(e => e.TenDV)
-            .IsUnicode(false);
 
             modelBuilder.Entity<DICHVU>()
             .Property(e => e.GiaDV);
@@ -116,19 +88,6 @@ namespace LTQLBTL.Models
             modelBuilder.Entity<CTPHIEUDANGKI>()
             .Property(e => e.MaCTPDK)
             .IsUnicode(false);
-
-            //modelBuilder.Entity<TINTUC>()
-            //.Property(e => e.ID)
-            //.IsUnicode(false);
-
-            //modelBuilder.Entity<TINTUC>()
-            //.Property(e => e.TieuDe)
-            //.IsUnicode(false);
-
-            //modelBuilder.Entity<TINTUC>()
-            //.Property(e => e.NoiDung)
-            //.IsUnicode(false);
-
 
         }
 
