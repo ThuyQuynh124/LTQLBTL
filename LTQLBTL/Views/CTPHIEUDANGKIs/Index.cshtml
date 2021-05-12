@@ -13,6 +13,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.MaCTPDK)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.PHIEUDANGKI.MaNV)
         </th>
         <th>
@@ -31,28 +34,31 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PHIEUDANGKI.MaNV)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaKH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoNguoi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayDen)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayDi)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaCTPDK }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaCTPDK }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaCTPDK })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaCTPDK)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PHIEUDANGKI.MaNV)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaKH)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SoNguoi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayDen)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayDi)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaCTPDK }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaCTPDK }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaCTPDK })
+    </td>
+</tr>
 }
 
 </table>
