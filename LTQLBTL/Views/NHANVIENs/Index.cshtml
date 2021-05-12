@@ -19,13 +19,7 @@
             @Html.DisplayNameFor(model => model.TenNV)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MaCV)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.DiaChi)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Tuoi)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.SoDT)
@@ -36,13 +30,13 @@
 @foreach (var item in Model) {
 <tr>
     <td>
+        @Html.DisplayFor(modelItem => item.MaNV)
+    </td>
+    <td>
         @Html.DisplayFor(modelItem => item.TenNV)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.DiaChi)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Tuoi)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.SoDT)

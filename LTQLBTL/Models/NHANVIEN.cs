@@ -16,7 +16,6 @@ namespace LTQLBTL.Models
         public string TenNV { get; set; }
         public string MaCV { get; set; }
         public string DiaChi { get; set; }
-        public int Tuoi { get; set; }
         [MaxLength(15)]
         public string SoDT { get; set; }
         public virtual ICollection<CHUCVU> CHUCVUs { get; set; }

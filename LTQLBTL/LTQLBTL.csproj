@@ -150,6 +150,10 @@
     <Compile Include="Migrations\202105031625562_Create_Database.Designer.cs">
       <DependentUpon>202105031625562_Create_Database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105120336429_Create_Database1.cs" />
+    <Compile Include="Migrations\202105120336429_Create_Database1.Designer.cs">
+      <DependentUpon>202105120336429_Create_Database1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\CHUCVU.cs" />
@@ -1925,6 +1929,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202105031625562_Create_Database.resx">
       <DependentUpon>202105031625562_Create_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105120336429_Create_Database1.resx">
+      <DependentUpon>202105120336429_Create_Database1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
